@@ -1,0 +1,76 @@
+[0.007s] Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description
+[0.050s] -- The C compiler identification is GNU 15.3.0
+[0.112s] -- The CXX compiler identification is GNU 15.3.0
+[0.119s] -- Detecting C compiler ABI info
+[0.197s] -- Detecting C compiler ABI info - done
+[0.212s] -- Check for working C compiler: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cc - skipped
+[0.212s] -- Detecting C compile features
+[0.213s] -- Detecting C compile features - done
+[0.226s] -- Detecting CXX compiler ABI info
+[0.310s] -- Detecting CXX compiler ABI info - done
+[0.323s] -- Check for working CXX compiler: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/c++ - skipped
+[0.323s] -- Detecting CXX compile features
+[0.323s] -- Detecting CXX compile features - done
+[0.332s] -- Found ament_cmake: 2.5.6 (/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/ament_cmake/cmake)
+[0.422s] -- Found Python3: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/python3 (found version "3.12.15") found components: Interpreter
+[0.459s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.495s] -- Found ament_lint_auto: 0.17.5 (/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/ament_lint_auto/cmake)
+[0.560s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.560s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.560s] -- Added test 'lint_cmake' to check CMake code style
+[0.561s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.562s] -- Added test 'xmllint' to check XML markup files
+[0.562s] -- Configuring done (0.6s)
+[0.564s] -- Generating done (0.0s)
+[0.564s] -- Build files have been written to: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description
+[0.568s] Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description' returned '0': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description
+[0.568s] Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description -- -j16 -l16
+[0.595s] Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description' returned '0': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description -- -j16 -l16
+[0.596s] Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description
+[0.602s] -- Install configuration: ""
+[0.603s] -- Execute custom install script
+[0.603s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/__pycache__/description.launch.cpython-312.pyc
+[0.611s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/description.launch.py
+[0.619s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/lift_actuator.xacro
+[0.627s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/piper_description.xacro
+[0.634s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_piper.xacro
+[0.639s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_v2.xacro
+[0.644s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_wheel_type1.xacro
+[0.652s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_wheel_type2.xacro
+[0.660s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/base_link.dae
+[0.667s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/base_link.stl
+[0.673s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_base_link.dae
+[0.678s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_base_link.stl
+[0.686s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_left_link.dae
+[0.693s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_left_link.stl
+[0.702s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_right_link.dae
+[0.711s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/gripper_right_link.stl
+[0.720s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link1.dae
+[0.729s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link1.stl
+[0.742s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link2.dae
+[0.755s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link2.stl
+[0.763s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link3.dae
+[0.770s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link3.stl
+[0.776s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link4.dae
+[0.781s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link4.stl
+[0.788s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link5.dae
+[0.795s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link5.stl
+[0.801s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link6.dae
+[0.807s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link6.stl
+[0.814s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/config/lift_params.yaml
+[0.823s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/ament_index/resource_index/package_run_dependencies/scout_with_piper_description
+[0.831s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/ament_index/resource_index/parent_prefix_path/scout_with_piper_description
+[0.841s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/environment/ament_prefix_path.sh
+[0.854s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/environment/ament_prefix_path.dsv
+[0.863s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/environment/path.sh
+[0.870s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/environment/path.dsv
+[0.879s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/local_setup.bash
+[0.894s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/local_setup.sh
+[0.903s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/local_setup.zsh
+[0.909s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/local_setup.dsv
+[0.916s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.dsv
+[0.923s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/ament_index/resource_index/packages/scout_with_piper_description
+[0.928s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/cmake/scout_with_piper_descriptionConfig.cmake
+[0.933s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/cmake/scout_with_piper_descriptionConfig-version.cmake
+[0.938s] -- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.xml
+[0.944s] Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description' returned '0': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description

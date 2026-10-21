@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!--
+  Unified Scout + telescoping lift + Piper arm.
+
+  Each subsystem is self-contained and owns its own mounts:
+    scout_v2.xacro          : Scout chassis and wheels (base_link is the root)
+    lift_actuator.xacro     : telescoping column, carriage, and the arm mount
+    piper_description.xacro : the arm itself (piper_base_link upward)
+
+  Full chain:
+    base_link -> lift_sleeve_link -> lift_carriage_link -> piper_base_link
+              -> piper_link1..6 -> gripper_base_link -> fingers
+
+  Mount tuning lives in launch arguments, not in this file:
+    lift_parent_link, lift_xyz, lift_rpy, lift_platform_link,
+    lift_platform_xyz, lift_mesh_dir
+-->
+<robot name="scout_piper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_v2.xacro" />
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/lift_actuator.xacro" />
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/piper_description.xacro" />
+
+</robot>

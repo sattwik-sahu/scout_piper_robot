@@ -1,0 +1,1 @@
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh

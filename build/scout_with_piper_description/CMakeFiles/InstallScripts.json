@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

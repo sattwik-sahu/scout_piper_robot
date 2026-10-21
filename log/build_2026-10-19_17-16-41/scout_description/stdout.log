@@ -1,0 +1,46 @@
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/python3 (found version "3.12.15") found components: Interpreter
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//launch/scout_base_description.launch.py
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//urdf/generate_urdf.sh
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//urdf/scout_v2.urdf
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//urdf/scout_v2.xacro
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//urdf/scout_wheel_type1.xacro
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//urdf/scout_wheel_type2.xacro
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//meshes/base_link.dae
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//meshes/base_link_full.dae
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//meshes/hokuyo.dae
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//meshes/wheel_type1.dae
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description//meshes/wheel_type2.dae
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/package_run_dependencies/scout_description
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/parent_prefix_path/scout_description
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/ament_prefix_path.sh
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/ament_prefix_path.dsv
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/path.sh
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/path.dsv
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.bash
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.sh
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.zsh
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.dsv
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.dsv
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/packages/scout_description
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/cmake/scout_descriptionConfig.cmake
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/cmake/scout_descriptionConfig-version.cmake
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.xml
