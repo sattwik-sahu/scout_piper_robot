@@ -2,6 +2,9 @@
 
 <robot name="piper" xmlns:xacro="http://ros.org/wiki/xacro">
 
+<xacro:arg name="left_camera_xyz" default="0 0 0" />
+<xacro:arg name="left_camera_rpy" default="0 0 0" />
+
 <!-- arm: agx_arm_urdf/piper (official DAE visuals, link names prefixed) -->
 
 
@@ -464,6 +467,35 @@
     <child link="gripper_right_link" />
     <axis xyz="0 1 0" />
     <limit lower="0" upper="0.05" effort="100" velocity="5" />
+  </joint>
+
+  <!-- Left camera mounted on the gripper base -->
+  <link name="left_camera_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.02" />
+      </geometry>
+      <material name="camera_grey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.02" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_camera_joint" type="fixed">
+    <origin xyz="$(arg left_camera_xyz)" rpy="$(arg left_camera_rpy)" />
+    <parent link="gripper_base_link" />
+    <child link="left_camera_link" />
   </joint>
 
 <!-- controller -->

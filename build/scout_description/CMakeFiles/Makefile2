@@ -54,7 +54,7 @@ RM = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/def
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description
+CMAKE_SOURCE_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description

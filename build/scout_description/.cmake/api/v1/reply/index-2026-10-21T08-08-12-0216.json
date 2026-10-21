@@ -1,0 +1,54 @@
+{
+	"cmake" : 
+	{
+		"generator" : 
+		{
+			"multiConfig" : false,
+			"name" : "Unix Makefiles"
+		},
+		"paths" : 
+		{
+			"cmake" : "/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake",
+			"cpack" : "/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cpack",
+			"ctest" : "/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/ctest",
+			"root" : "/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/cmake-4.4"
+		},
+		"version" : 
+		{
+			"isDirty" : false,
+			"major" : 4,
+			"minor" : 4,
+			"patch" : 4,
+			"string" : "4.4.4",
+			"suffix" : ""
+		}
+	},
+	"objects" : 
+	[
+		{
+			"jsonFile" : "codemodel-v2-84fb910afea20cd709c3.json",
+			"kind" : "codemodel",
+			"version" : 
+			{
+				"major" : 2,
+				"minor" : 11
+			}
+		}
+	],
+	"reply" : 
+	{
+		"client-colcon-cmake" : 
+		{
+			"codemodel-v2" : 
+			{
+				"jsonFile" : "codemodel-v2-84fb910afea20cd709c3.json",
+				"kind" : "codemodel",
+				"version" : 
+				{
+					"major" : 2,
+					"minor" : 11
+				}
+			}
+		}
+	}
+}

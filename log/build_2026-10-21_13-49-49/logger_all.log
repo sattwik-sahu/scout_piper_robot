@@ -1,0 +1,243 @@
+[0.064s] colcon DEBUG Command line arguments: ['/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/colcon', 'build', '--symlink-install', '--packages-up-to', 'scout_with_piper_description']
+[0.064s] colcon DEBUG Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['scout_with_piper_description'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x77a7b8053e30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x77a7b8053b60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x77a7b8053b60>>)
+[0.079s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) check parameters
+[0.079s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) check parameters
+[0.079s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) check parameters
+[0.079s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) discover
+[0.079s] colcon.colcon_core.package_discovery INFO Crawling recursively for packages in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws'
+[0.080s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.080s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore'
+[0.080s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ignore_ament_install'
+[0.080s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['ros']
+[0.080s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'ros'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['cmake', 'python']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'cmake'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'python'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(.) by extensions ['python_setup_py']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(.) by extension 'python_setup_py'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(build) by extension 'ignore'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(build) ignored
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(install) by extension 'ignore'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(install) ignored
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(log) by extension 'ignore'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(log) ignored
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'ignore'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'ignore_ament_install'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extensions ['ros']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'ros'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extensions ['cmake', 'python']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'cmake'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'python'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extensions ['python_setup_py']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(scripts) by extension 'python_setup_py'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ignore'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ignore_ament_install'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['ros']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'ros'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['cmake', 'python']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'cmake'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'python'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extensions ['python_setup_py']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src) by extension 'python_setup_py'
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src/isaacsim_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] colcon.colcon_core.package_identification Level 1 _identify(src/isaacsim_bringup) by extension 'ignore'
+[0.095s] colcon.colcon_core.package_identification Level 1 _identify(src/isaacsim_bringup) by extension 'ignore_ament_install'
+[0.095s] colcon.colcon_core.package_identification Level 1 _identify(src/isaacsim_bringup) by extensions ['ros']
+[0.095s] colcon.colcon_core.package_identification Level 1 _identify(src/isaacsim_bringup) by extension 'ros'
+[0.096s] colcon.colcon_core.package_identification DEBUG Package 'src/isaacsim_bringup' with type 'ros.ament_python' and name 'isaacsim_bringup'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'ignore'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'ignore_ament_install'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extensions ['ros']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'ros'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extensions ['cmake', 'python']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'cmake'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'python'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extensions ['python_setup_py']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout) by extension 'python_setup_py'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'ignore'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'ignore_ament_install'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extensions ['ros']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'ros'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extensions ['cmake', 'python']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'cmake'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'python'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extensions ['python_setup_py']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/image) by extension 'python_setup_py'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/pro) by extensions ['ignore', 'ignore_ament_install']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/pro) by extension 'ignore'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/pro) by extension 'ignore_ament_install'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/pro) by extensions ['ros']
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/pro) by extension 'ros'
+[0.096s] colcon.colcon_core.package_identification DEBUG Package 'src/scout/pro' with type 'ros.catkin' and name 'pro'
+[0.096s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_control) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_control) by extension 'ignore'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_control) by extension 'ignore_ament_install'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_control) by extensions ['ros']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_control) by extension 'ros'
+[0.097s] colcon.colcon_core.package_identification DEBUG Package 'src/scout/scout_control' with type 'ros.catkin' and name 'scout_control'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_description) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_description) by extension 'ignore'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_description) by extension 'ignore_ament_install'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_description) by extensions ['ros']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_description) by extension 'ros'
+[0.097s] colcon.colcon_core.package_identification DEBUG Package 'src/scout/scout_description' with type 'ros.ament_cmake' and name 'scout_description'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_gazebo_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_gazebo_sim) by extension 'ignore'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_gazebo_sim) by extension 'ignore_ament_install'
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_gazebo_sim) by extensions ['ros']
+[0.097s] colcon.colcon_core.package_identification Level 1 _identify(src/scout/scout_gazebo_sim) by extension 'ros'
+[0.098s] colcon.colcon_core.package_identification DEBUG Package 'src/scout/scout_gazebo_sim' with type 'ros.catkin' and name 'scout_gazebo_sim'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(src/scout_with_piper_description) by extensions ['ignore', 'ignore_ament_install']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(src/scout_with_piper_description) by extension 'ignore'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(src/scout_with_piper_description) by extension 'ignore_ament_install'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(src/scout_with_piper_description) by extensions ['ros']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(src/scout_with_piper_description) by extension 'ros'
+[0.098s] colcon.colcon_core.package_identification DEBUG Package 'src/scout_with_piper_description' with type 'ros.ament_cmake' and name 'scout_with_piper_description'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extensions ['ignore', 'ignore_ament_install']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'ignore'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'ignore_ament_install'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extensions ['ros']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'ros'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extensions ['cmake', 'python']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'cmake'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'python'
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extensions ['python_setup_py']
+[0.098s] colcon.colcon_core.package_identification Level 1 _identify(tmp) by extension 'python_setup_py'
+[0.098s] colcon.colcon_core.package_discovery Level 1 discover_packages(recursive) using defaults
+[0.098s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) discover
+[0.098s] colcon.colcon_core.package_discovery Level 1 discover_packages(ignore) using defaults
+[0.098s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) discover
+[0.098s] colcon.colcon_core.package_discovery Level 1 discover_packages(path) using defaults
+[0.104s] colcon.colcon_core.package_selection INFO Skipping package 'scout_gazebo_sim' in 'src/scout/scout_gazebo_sim'
+[0.104s] colcon.colcon_core.package_selection INFO Skipping package 'scout_control' in 'src/scout/scout_control'
+[0.104s] colcon.colcon_core.package_selection INFO Skipping package 'pro' in 'src/scout/pro'
+[0.104s] colcon.colcon_core.package_selection INFO Skipping package 'isaacsim_bringup' in 'src/isaacsim_bringup'
+[0.104s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_args' from command line to 'None'
+[0.104s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_target' from command line to 'None'
+[0.104s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.104s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.105s] colcon.colcon_core.verb DEBUG Building package 'scout_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description', 'merge_install': False, 'path': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description', 'symlink_install': True, 'test_result_base': None}
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_args' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_target' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.105s] colcon.colcon_core.verb Level 5 set package 'scout_with_piper_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.105s] colcon.colcon_core.verb DEBUG Building package 'scout_with_piper_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description', 'merge_install': False, 'path': '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description', 'symlink_install': True, 'test_result_base': None}
+[0.105s] colcon.colcon_core.executor INFO Executing jobs using 'parallel' executor
+[0.105s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete
+[0.105s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description' with build type 'ament_cmake'
+[0.105s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description'
+[0.106s] colcon.colcon_core.plugin_system INFO Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.106s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.106s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.114s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description -- -j16 -l16
+[0.140s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description -- -j16 -l16
+[0.145s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description
+[0.157s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(scout_description)
+[0.158s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description
+[0.158s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description' for CMake module files
+[0.159s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description' for CMake config files
+[0.159s] colcon.colcon_core.shell Level 1 create_environment_hook('scout_description', 'cmake_prefix_path')
+[0.159s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.ps1'
+[0.159s] colcon.colcon_core.shell INFO Creating environment descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.dsv'
+[0.160s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.sh'
+[0.161s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/bin'
+[0.161s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/lib/pkgconfig/scout_description.pc'
+[0.161s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/lib/python3.12/site-packages'
+[0.161s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/bin'
+[0.162s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.ps1'
+[0.162s] colcon.colcon_core.shell INFO Creating package descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.dsv'
+[0.162s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.sh'
+[0.163s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.bash'
+[0.163s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.zsh'
+[0.164s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/colcon-core/packages/scout_description)
+[0.164s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(scout_description)
+[0.164s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description' for CMake module files
+[0.164s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description' for CMake config files
+[0.164s] colcon.colcon_core.shell Level 1 create_environment_hook('scout_description', 'cmake_prefix_path')
+[0.164s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.ps1'
+[0.164s] colcon.colcon_core.shell INFO Creating environment descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.dsv'
+[0.165s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/hook/cmake_prefix_path.sh'
+[0.165s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/bin'
+[0.165s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/lib/pkgconfig/scout_description.pc'
+[0.165s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/lib/python3.12/site-packages'
+[0.165s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/bin'
+[0.165s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.ps1'
+[0.166s] colcon.colcon_core.shell INFO Creating package descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.dsv'
+[0.166s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.sh'
+[0.166s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.bash'
+[0.166s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.zsh'
+[0.166s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/colcon-core/packages/scout_description)
+[0.167s] colcon.colcon_ros.task.ament_cmake.build INFO Building ROS package in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description' with build type 'ament_cmake'
+[0.167s] colcon.colcon_cmake.task.cmake.build INFO Building CMake package in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description'
+[0.167s] colcon.colcon_core.shell INFO Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.167s] colcon.colcon_core.shell DEBUG Skip shell extension 'dsv' for command environment
+[0.174s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description -- -j16 -l16
+[0.199s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description' returned '0': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --build /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description -- -j16 -l16
+[0.199s] colcon.colcon_core.event_handler.log_command DEBUG Invoking command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description
+[0.231s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(scout_with_piper_description)
+[0.231s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description' for CMake module files
+[0.231s] colcon.colcon_core.event_handler.log_command DEBUG Invoked command in '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description' returned '0': CMAKE_PREFIX_PATH=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description:/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(jazzy_ws) /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/bin/cmake --install /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description
+[0.232s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description' for CMake config files
+[0.232s] colcon.colcon_core.shell Level 1 create_environment_hook('scout_with_piper_description', 'cmake_prefix_path')
+[0.232s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.ps1'
+[0.232s] colcon.colcon_core.shell INFO Creating environment descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.dsv'
+[0.232s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.sh'
+[0.233s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/bin'
+[0.233s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/lib/pkgconfig/scout_with_piper_description.pc'
+[0.233s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/lib/python3.12/site-packages'
+[0.233s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/bin'
+[0.233s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.ps1'
+[0.233s] colcon.colcon_core.shell INFO Creating package descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.dsv'
+[0.234s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.sh'
+[0.234s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.bash'
+[0.234s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.zsh'
+[0.234s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/colcon-core/packages/scout_with_piper_description)
+[0.234s] colcon.colcon_core.environment Level 1 create_environment_scripts_only(scout_with_piper_description)
+[0.235s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description' for CMake module files
+[0.235s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description' for CMake config files
+[0.235s] colcon.colcon_core.shell Level 1 create_environment_hook('scout_with_piper_description', 'cmake_prefix_path')
+[0.235s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.ps1'
+[0.235s] colcon.colcon_core.shell INFO Creating environment descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.dsv'
+[0.235s] colcon.colcon_core.shell INFO Creating environment hook '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/hook/cmake_prefix_path.sh'
+[0.236s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/bin'
+[0.236s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/lib/pkgconfig/scout_with_piper_description.pc'
+[0.236s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/lib/python3.12/site-packages'
+[0.236s] colcon.colcon_core.environment Level 1 checking '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/bin'
+[0.236s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.ps1'
+[0.237s] colcon.colcon_core.shell INFO Creating package descriptor '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.dsv'
+[0.237s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.sh'
+[0.237s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.bash'
+[0.238s] colcon.colcon_core.shell INFO Creating package script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/package.zsh'
+[0.238s] colcon.colcon_core.environment Level 1 create_file_with_runtime_dependencies(/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/colcon-core/packages/scout_with_piper_description)
+[0.238s] colcon.colcon_parallel_executor.executor.parallel DEBUG closing loop
+[0.238s] colcon.colcon_parallel_executor.executor.parallel DEBUG loop closed
+[0.238s] colcon.colcon_parallel_executor.executor.parallel DEBUG run_until_complete finished with '0'
+[0.238s] colcon.colcon_core.event_reactor DEBUG joining thread
+[0.239s] colcon.colcon_core.event_reactor DEBUG joined thread
+[0.239s] colcon.colcon_core.shell INFO Creating prefix script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/local_setup.ps1'
+[0.239s] colcon.colcon_core.shell INFO Creating prefix util module '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/_local_setup_util_ps1.py'
+[0.240s] colcon.colcon_core.shell INFO Creating prefix chain script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/setup.ps1'
+[0.241s] colcon.colcon_core.shell INFO Creating prefix script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/local_setup.sh'
+[0.241s] colcon.colcon_core.shell INFO Creating prefix util module '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/_local_setup_util_sh.py'
+[0.241s] colcon.colcon_core.shell INFO Creating prefix chain script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/setup.sh'
+[0.242s] colcon.colcon_core.shell INFO Creating prefix script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/local_setup.bash'
+[0.242s] colcon.colcon_core.shell INFO Creating prefix chain script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/setup.bash'
+[0.243s] colcon.colcon_core.shell INFO Creating prefix script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/local_setup.zsh'
+[0.243s] colcon.colcon_core.shell INFO Creating prefix chain script '/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/setup.zsh'

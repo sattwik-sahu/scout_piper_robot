@@ -1,0 +1,1 @@
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_with_piper_description/launch/description_scout_mini_piper.launch.py

@@ -1,0 +1,24 @@
+# Central configuration for the Scout + lift + Piper mobile manipulator.
+#
+# All robot-level tunables live here: actuator mount/heights, camera extrinsics, etc.
+
+# ---- Telescoping linear actuator -----------------------------------------
+lift:
+  # Where the tube attaches
+  mount:
+    parent_link: base_link
+    xyz: [0.15, 0.0, 0.05]
+    rpy: [0.0, 0.0, 0.0]
+  # Payload heights above the mount point
+  home_height: 0.18
+  max_height: 0.33
+  # Payload riding the rod
+  platform:
+    link: piper_base_link
+    xyz: [0.0, 0.0, 0.01]
+
+# ---- Left camera on the gripper base -------------------------------------
+left_camera:
+  # Estimated from gripper_base_link.dae top mounting surface
+  xyz: [0.065, -0.005, 0.0473]
+  rpy: [0.0, 0.0, 0.0]

@@ -25,18 +25,22 @@ LIFT_KEYS = [
     "lift_platform_link",
     "lift_platform_xyz",
     "lift_mesh_dir",
+    "left_camera_xyz",
+    "left_camera_rpy",
 ]
 
 # YAML key path -> launch arg name. Single source of truth for the mapping.
 YAML_MAP = {
-    "lift_parent_link": ("mount", "parent_link"),
-    "lift_xyz": ("mount", "xyz"),
-    "lift_rpy": ("mount", "rpy"),
-    "lift_home_height": ("home_height",),
-    "lift_max_height": ("max_height",),
-    "lift_platform_link": ("platform", "link"),
-    "lift_platform_xyz": ("platform", "xyz"),
-    "lift_mesh_dir": ("mesh_dir",),
+    "lift_parent_link": ("lift", "mount", "parent_link"),
+    "lift_xyz": ("lift", "mount", "xyz"),
+    "lift_rpy": ("lift", "mount", "rpy"),
+    "lift_home_height": ("lift", "home_height"),
+    "lift_max_height": ("lift", "max_height"),
+    "lift_platform_link": ("lift", "platform", "link"),
+    "lift_platform_xyz": ("lift", "platform", "xyz"),
+    "lift_mesh_dir": ("lift", "mesh_dir"),
+    "left_camera_xyz": ("left_camera", "xyz"),
+    "left_camera_rpy": ("left_camera", "rpy"),
 }
 
 
@@ -57,21 +61,21 @@ def _as_xyz_string(value):
     return str(value)
 
 
-def _load_lift_yaml(path):
+def _load_robot_yaml(path):
     file_path = Path(path).expanduser()
     if not file_path.is_file():
-        raise RuntimeError(f"lift_params_file not found: {file_path}")
+        raise RuntimeError(f"robot_config_file not found: {file_path}")
     with file_path.open() as handle:
         data = yaml.safe_load(handle) or {}
     if "lift" not in data:
         raise RuntimeError(f"{file_path}: missing top-level 'lift:' section")
-    return data["lift"]
+    return data
 
 
 def _resolve_lift_values(context):
     """CLI argument if given, else the YAML file, else nothing (xacro default)."""
-    params_file = context.perform_substitution(LaunchConfiguration("lift_params_file"))
-    lift = _load_lift_yaml(params_file) if params_file else {}
+    params_file = context.perform_substitution(LaunchConfiguration("robot_config_file"))
+    lift = _load_robot_yaml(params_file) if params_file else {}
 
     resolved = {}
     for arg_name, yaml_path in YAML_MAP.items():
@@ -187,13 +191,13 @@ def generate_launch_description():
         [
             FindPackageShare("scout_with_piper_description"),
             "config",
-            "lift_params.yaml",
+            "robot.yaml",
         ]
     )
 
     declared = [
         DeclareLaunchArgument(
-            "lift_params_file",
+            "robot_config_file",
             default_value=default_params,
             description="YAML file holding the lift dimensions",
         )

@@ -1,1 +1,0 @@
-/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description/urdf/generate_urdf.sh

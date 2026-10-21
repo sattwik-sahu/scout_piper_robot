@@ -302,7 +302,7 @@ scout_description_BINARY_DIR:STATIC=/mnt/toshiba_hdd/code/robot-learning/dlrl/bi
 scout_description_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-scout_description_SOURCE_DIR:STATIC=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description
+scout_description_SOURCE_DIR:STATIC=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description
 
 
 ########################
@@ -396,7 +396,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description
+CMAKE_HOME_DIRECTORY:INTERNAL=/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

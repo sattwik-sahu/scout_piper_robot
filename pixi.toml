@@ -65,6 +65,7 @@ torch = { version = "*", index = "https://download.pytorch.org/whl/cu128" }
 [tasks]
 # ROS
 build = { cmd = "colcon build --merge-install --cmake-args -DBUILD_TESTING=OFF -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY", description = "Build the ROS workspace" }
+build-scout = { cmd = "colcon build --symlink-install --packages-up-to scout_with_piper_description", description = "Build scout_description and scout_with_piper_description with symlink install" }
 test = {cmd = "colcon test", description = "Run tests for the workspace"}
 clean = {cmd = "rm -rf build install log", description = "Clean build artifacts (build, install, log directories)"}
 zenoh = "ros2 run rmw_zenoh_cpp rmw_zenohd"

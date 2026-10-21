@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description
+# Install script for directory: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

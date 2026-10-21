@@ -53,7 +53,7 @@ RM = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/def
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description
+CMAKE_SOURCE_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description
@@ -81,6 +81,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout_ros/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
+	cd /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/src/scout/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
 .PHONY : CMakeFiles/uninstall.dir/depend
 

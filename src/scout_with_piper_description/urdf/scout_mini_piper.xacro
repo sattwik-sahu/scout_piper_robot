@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!--
+  Unified Scout Mini + telescoping lift + Piper arm.
+
+  Swaps the Scout v2 base for the Scout Mini (indoor wheels: wheel.dae).
+  Subsystems:
+    scout_mini.xacro            : Scout Mini chassis and wheels (base_link is the root)
+    lift_actuator.xacro         : telescoping column, carriage, and the arm mount
+    piper_description.xacro      : the arm itself (piper_base_link upward)
+-->
+<robot name="scout_mini_piper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_mini.xacro" />
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/lift_actuator.xacro" />
+  <xacro:include filename="$(find scout_with_piper_description)/urdf/piper_description.xacro" />
+
+</robot>

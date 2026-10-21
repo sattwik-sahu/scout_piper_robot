@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!--
+  Telescoping linear actuator: fixed TUBE on the chassis, ROD sliding up out
+  of it, payload (Piper arm) on the rod's top face.
+
+  Terminology (industry standard):
+    tube = fixed outer body (was called "sleeve")
+    rod  = moving inner member / ram (was called "carriage")
+
+  Kinematic chain:
+    <lift_parent_link> =[fixed lift_mount_joint]=> lift_tube_link
+    lift_tube_link     =[prismatic lift_joint]=> lift_rod_link
+    lift_rod_link      =[fixed lift_mount_joint_arm]=> <lift_platform_link>
+
+  Height convention (all above the tube's own mount point):
+    tube_length = home_height - platform_xyz.z
+    travel      = max_height  - home_height
+    rod occupies z in [q, q + tube_length] in the rod frame
+    payload z   = q + tube_length + platform_xyz.z
+                 = home_height at q=0, max_height at q=travel
+
+  So the user only ever states home_height and max_height; tube length and
+  the joint limit are derived. See config/lift_params.yaml.
+
+  Materials: URDF has no specular/metallic channel (only diffuse color and
+  texture), so "metallic" here is a steel/chrome base tone that reads as metal
+  under decent lighting. For true specular highlights the tube and rod would
+  have to become DAE meshes with a phong material: swap the geometry block
+  below and set lift_mesh_dir.
+-->
+<robot name="lift_actuator" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Mount -->
+  <xacro:arg name="lift_parent_link" default="base_link" />
+  <xacro:arg name="lift_xyz" default="-0.2 0 0.113" />
+  <xacro:arg name="lift_rpy" default="0 0 0" />
+
+  <!-- Payload heights above the mount point -->
+  <xacro:arg name="lift_home_height" default="0.32" />
+  <xacro:arg name="lift_max_height" default="0.57" />
+
+  <!-- Payload -->
+  <xacro:arg name="lift_platform_link" default="piper_base_link" />
+  <xacro:arg name="lift_platform_xyz" default="0 0 0.02" />
+
+  <!-- Empty = primitive placeholders; set to a package:// dir to use CAD -->
+  <xacro:arg name="lift_mesh_dir" default="" />
+
+  <!-- Fixed appearance / inertia (not exposed as tunables) -->
+  <xacro:property name="tube_radius" value="0.04" />
+  <xacro:property name="tube_mass" value="2.0" />
+  <xacro:property name="rod_radius" value="0.02" />
+  <xacro:property name="rod_mass" value="2.0" />
+  <xacro:property name="plate_size" value="0.1 0.1 0.02" />
+  <xacro:property name="plate_z" value="0.01" />
+
+  <!-- Derived geometry: tube length and travel from the two stated heights -->
+  <xacro:property name="platform_x" value="${round(float('$(arg lift_platform_xyz)'.split()[0]), 6)}" />
+  <xacro:property name="platform_y" value="${round(float('$(arg lift_platform_xyz)'.split()[1]), 6)}" />
+  <xacro:property name="platform_z" value="${round(float('$(arg lift_platform_xyz)'.split()[2]), 6)}" />
+  <xacro:property name="tube_length" value="${round(float('$(arg lift_home_height)') - platform_z, 6)}" />
+  <xacro:property name="lift_travel" value="${round(float('$(arg lift_max_height)') - float('$(arg lift_home_height)'), 6)}" />
+  <!-- Payload sits on the rod TOP FACE, not at the rod origin (tube base) -->
+  <xacro:property name="platform_mount_xyz" value="${platform_x} ${platform_y} ${round(tube_length + platform_z, 6)}" />
+
+  <xacro:property name="tube_box" value="${2 * tube_radius} ${2 * tube_radius} ${tube_length}" />
+  <xacro:property name="rod_box" value="${2 * rod_radius} ${2 * rod_radius} ${tube_length}" />
+
+  <!-- Solid-box inertia, so it stays consistent as lengths change -->
+  <xacro:property name="tube_ixx" value="${tube_mass / 12.0 * ((2 * tube_radius) ** 2 + tube_length ** 2)}" />
+  <xacro:property name="tube_izz" value="${tube_mass / 6.0 * (2 * tube_radius) ** 2}" />
+  <xacro:property name="rod_ixx" value="${rod_mass / 12.0 * ((2 * rod_radius) ** 2 + tube_length ** 2)}" />
+  <xacro:property name="rod_izz" value="${rod_mass / 6.0 * (2 * rod_radius) ** 2}" />
+
+  <!-- Steel / chrome tones: the closest URDF gets to "metallic" -->
+  <xacro:property name="tube_color" value="0.42 0.45 0.50 1" />
+  <xacro:property name="rod_color" value="0.62 0.65 0.70 1" />
+
+  <xacro:macro name="lift_tube" params="parent_link mesh_dir">
+    <link name="lift_tube_link">
+      <inertial>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <mass value="${tube_mass}" />
+        <inertia ixx="${tube_ixx}" ixy="0" ixz="0" iyy="${tube_ixx}" iyz="0" izz="${tube_izz}" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <geometry>
+          <xacro:if value="${mesh_dir == ''}">
+            <cylinder radius="${tube_radius}" length="${tube_length}" />
+          </xacro:if>
+          <xacro:unless value="${mesh_dir == ''}">
+            <mesh filename="${mesh_dir}/lift_tube.dae" />
+          </xacro:unless>
+        </geometry>
+        <material name="lift_tube_steel">
+          <color rgba="${tube_color}" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <geometry>
+          <box size="${tube_box}" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="lift_mount_joint" type="fixed">
+      <parent link="${parent_link}" />
+      <child link="lift_tube_link" />
+      <origin xyz="$(arg lift_xyz)" rpy="$(arg lift_rpy)" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="lift_rod" params="parent_link mesh_dir">
+    <link name="lift_rod_link">
+      <inertial>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <mass value="${rod_mass}" />
+        <inertia ixx="${rod_ixx}" ixy="0" ixz="0" iyy="${rod_ixx}" iyz="0" izz="${rod_izz}" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <geometry>
+          <xacro:if value="${mesh_dir == ''}">
+            <cylinder radius="${rod_radius}" length="${tube_length}" />
+          </xacro:if>
+          <xacro:unless value="${mesh_dir == ''}">
+            <mesh filename="${mesh_dir}/lift_rod.dae" />
+          </xacro:unless>
+        </geometry>
+        <material name="lift_rod_chrome">
+          <color rgba="${rod_color}" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${tube_length / 2}" rpy="0 0 0" />
+        <geometry>
+          <box size="${rod_box}" />
+        </geometry>
+      </collision>
+      <!-- mounting plate on the rod top face -->
+      <visual>
+        <origin xyz="0 0 ${tube_length + plate_z}" rpy="0 0 0" />
+        <geometry>
+          <box size="${plate_size}" />
+        </geometry>
+        <material name="lift_rod_chrome">
+          <color rgba="${rod_color}" />
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 ${tube_length + plate_z}" rpy="0 0 0" />
+        <geometry>
+          <box size="${plate_size}" />
+        </geometry>
+      </collision>
+    </link>
+    <joint name="lift_joint" type="prismatic">
+      <parent link="${parent_link}" />
+      <child link="lift_rod_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="${lift_travel}" effort="500" velocity="0.05" />
+      <dynamics damping="1000" friction="10" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:lift_tube parent_link="$(arg lift_parent_link)" mesh_dir="$(arg lift_mesh_dir)" />
+
+  <xacro:lift_rod parent_link="lift_tube_link" mesh_dir="$(arg lift_mesh_dir)" />
+
+  <!-- The lift owns the payload mount: rod TOP FACE -> piper_base_link -->
+  <joint name="lift_mount_joint_arm" type="fixed">
+    <parent link="lift_rod_link" />
+    <child link="$(arg lift_platform_link)" />
+    <origin xyz="${platform_mount_xyz}" rpy="0 0 0" />
+  </joint>
+
+</robot>

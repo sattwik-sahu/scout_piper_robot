@@ -1,7 +1,17 @@
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/__pycache__/description.launch.cpython-312.pyc
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/description.launch.py
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/description_scout_mini_piper.launch.py
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/scout_mini_piper.launch.py
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/launch/scout_mini_piper_small.launch.py
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/lift_actuator.xacro
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/lift_actuator_small.xacro
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/piper_description.xacro
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_mini.xacro
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_mini_piper.urdf
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_mini_piper.xacro
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_mini_piper_small.urdf
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_mini_piper_small.xacro
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_piper.urdf
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_piper.xacro
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_v2.xacro
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/urdf/scout_wheel_type1.xacro
@@ -26,7 +36,7 @@
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link5.stl
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link6.dae
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/meshes/link6.stl
-/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/config/lift_params.yaml
+/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/config/robot.yaml
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/ament_index/resource_index/package_run_dependencies/scout_with_piper_description
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/ament_index/resource_index/parent_prefix_path/scout_with_piper_description
 /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_with_piper_description/share/scout_with_piper_description/environment/ament_prefix_path.sh

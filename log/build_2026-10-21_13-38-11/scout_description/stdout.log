@@ -1,0 +1,56 @@
+-- Found ament_cmake: 2.5.6 (/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/.pixi/envs/default/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/display_mini_models.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/display_scout_mini.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/display_scout_v2.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/gazebo.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/scout_mini_stock.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/launch/scout_v2_stock.launch
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/1_Link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/2_Link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/3_Link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/4_Link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/base_link.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/base_link_full.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/box_link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/scout_mini_base_link.STL
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/scout_mini_base_link.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/scout_mini_base_link2.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/wheel.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/wheel_type1.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/meshes/wheel_type2.dae
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/empty.urdf
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/mini.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini.gazebo
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini.urdf
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini_wheel.gazebo
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini_wheel_1.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini_wheel_2.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini_wheel_3.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_mini_wheel_4.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_v2.gazebo
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_v2.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_wheel.gazebo
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_wheel_type1.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/urdf/scout_wheel_type2.xacro
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/package_run_dependencies/scout_description
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/parent_prefix_path/scout_description
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/path.sh
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/environment/path.dsv
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.bash
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.sh
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.zsh
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/local_setup.dsv
+-- Symlinking: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.dsv
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/ament_index/resource_index/packages/scout_description
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/cmake/scout_descriptionConfig.cmake
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/cmake/scout_descriptionConfig-version.cmake
+-- Up-to-date symlink: /mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/install/scout_description/share/scout_description/package.xml
