@@ -1,1 +1,0 @@
-/mnt/toshiba_hdd/code/robot-learning/dlrl/biolab-isaacsim_ws/build/scout_with_piper_description/ament_cmake_environment_hooks/local_setup.zsh

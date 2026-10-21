@@ -217,7 +217,6 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
     <limit effort="500" lower="0" upper="0.25" velocity="0.05"/>
-    <dynamics damping="1000" friction="10"/>
   </joint>
   <!-- The lift owns the payload mount: rod TOP FACE -> piper_base_link -->
   <joint name="lift_mount_joint_arm" type="fixed">
@@ -530,7 +529,7 @@
     <limit effort="100" lower="0" upper="0.05" velocity="5"/>
   </joint>
   <!-- Left camera mounted on the gripper base -->
-  <link name="left_camera_link">
+  <link name="gripper_left_camera_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.05"/>
@@ -552,10 +551,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="left_camera_joint" type="fixed">
+  <joint name="gripper_left_camera_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="gripper_base_link"/>
-    <child link="left_camera_link"/>
+    <child link="gripper_left_camera_link"/>
   </joint>
   <!-- controller -->
   <!--For ROS2 Control configuration -->

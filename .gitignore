@@ -1,3 +1,21 @@
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+# ROS / colcon build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+tmp/
+
+# Generated zenoh shim libraries
+.zenoh_shim/
+
+# Editor
+.vscode/
