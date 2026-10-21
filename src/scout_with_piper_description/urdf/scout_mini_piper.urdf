@@ -27,11 +27,6 @@
         <mesh filename="package://scout_description/meshes/scout_mini_base_link2.dae"/>
       </geometry>
     </collision>
-    <inertial>
-      <mass value="60"/>
-      <origin xyz="0.0 0.0 0.0"/>
-      <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465"/>
-    </inertial>
   </link>
   <link name="inertial_link">
     <inertial>
@@ -555,6 +550,19 @@
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="gripper_base_link"/>
     <child link="gripper_left_camera_link"/>
+  </joint>
+  <!-- Optical frame (REP-103): x right, y down, z forward -->
+  <link name="gripper_left_camera_optical_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06"/>
+    </inertial>
+  </link>
+  <joint name="gripper_left_camera_optical_joint" type="fixed">
+    <origin rpy="-1.5708 0 -1.5708" xyz="0 0 0"/>
+    <parent link="gripper_left_camera_link"/>
+    <child link="gripper_left_camera_optical_link"/>
   </joint>
   <!-- controller -->
   <!--For ROS2 Control configuration -->

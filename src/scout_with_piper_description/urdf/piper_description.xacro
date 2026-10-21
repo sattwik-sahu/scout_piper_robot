@@ -498,6 +498,20 @@
     <child link="gripper_left_camera_link" />
   </joint>
 
+  <!-- Optical frame (REP-103): x right, y down, z forward -->
+  <link name="gripper_left_camera_optical_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="1e-06" ixy="0" ixz="0" iyy="1e-06" iyz="0" izz="1e-06" />
+    </inertial>
+  </link>
+  <joint name="gripper_left_camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708" />
+    <parent link="gripper_left_camera_link" />
+    <child link="gripper_left_camera_optical_link" />
+  </joint>
+
 <!-- controller -->
 
   <xacro:macro name="transmission_block" params="tran_name joint_name motor_name">
