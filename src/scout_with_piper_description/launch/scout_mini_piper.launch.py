@@ -4,6 +4,7 @@ import yaml
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch.conditions import IfCondition, UnlessCondition
+from launch.substitutions import PythonExpression
 from launch.substitutions import (
     Command,
     FindExecutable,
@@ -181,7 +182,11 @@ def _launch_setup(context, *args, **kwargs):
         Node(
             package="joint_state_publisher_gui",
             executable="joint_state_publisher_gui",
-            condition=IfCondition(gui),
+            condition=IfCondition(
+                PythonExpression(
+                    ["'", gui, "' == 'true' and '", LaunchConfiguration("joint_state_publisher"), "' == 'true'"]
+                )
+            ),
         ),
     ]
 
@@ -220,6 +225,11 @@ def generate_launch_description():
             "gui",
             default_value="true",
             description="Joint sliders (gui) vs static zeros",
+        ),
+        DeclareLaunchArgument(
+            "joint_state_publisher",
+            default_value="true",
+            description="Start joint_state_publisher (gui) when true",
         ),
         OpaqueFunction(function=_launch_setup),
     ]
