@@ -2,6 +2,14 @@
 <robot name="scout_mini" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- Scout Mini base with indoor wheels (wheel.dae), not the rugged type1/type2 wheels. -->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
   <link name="base_link">
     <visual>
       <origin rpy="1.57 0 -1.57" xyz="0 0 0.0"/>
@@ -15,6 +23,11 @@
         <mesh filename="package://scout_description/meshes/scout_mini_base_link2.dae"/>
       </geometry>
     </collision>
+    <inertial>
+      <mass value="60"/>
+      <origin xyz="0.0 0.0 0.0"/>
+      <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465"/>
+    </inertial>
   </link>
 
   <link name="inertial_link">
