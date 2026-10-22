@@ -205,6 +205,8 @@ local_costmap:
       rolling_window: true
       width: 5
       height: 5
+      origin_x: -2.5
+      origin_y: 5.0
       resolution: 0.05
       transform_tolerance: 0.1
       plugins: ["voxel_layer", "inflation_layer"]
@@ -244,6 +246,8 @@ local_costmap:
       rolling_window: false
       width: 50
       height: 50
+      origin_x: -25.0
+      origin_y: -25.0
       resolution: 0.05
       transform_tolerance: 0.1
       plugins: ["voxel_layer", "inflation_layer"]
@@ -285,6 +289,8 @@ global_costmap:
       rolling_window: false
       width: 50
       height: 50
+      origin_x: -25.0
+      origin_y: -25.0
       resolution: 0.05
       transform_tolerance: 0.1
       plugins: ["voxel_layer", "inflation_layer"]

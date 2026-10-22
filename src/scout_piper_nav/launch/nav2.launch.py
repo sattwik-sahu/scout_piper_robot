@@ -8,8 +8,12 @@ def generate_launch_description():
     params_file = LaunchConfiguration("params_file")
     use_sim_time = LaunchConfiguration("use_sim_time")
 
-    relay = ExecuteProcess(
+    tf_relay = ExecuteProcess(
         cmd=["python3", PathJoinSubstitution([FindPackageShare("scout_piper_nav"), "scripts", "tf_relay.py"])],
+        output="screen",
+    )
+    cmd_relay = ExecuteProcess(
+        cmd=["python3", PathJoinSubstitution([FindPackageShare("scout_piper_nav"), "scripts", "cmd_vel_relay.py"])],
         output="screen",
     )
 
@@ -17,7 +21,8 @@ def generate_launch_description():
         DeclareLaunchArgument("params_file", default_value=PathJoinSubstitution([FindPackageShare("scout_piper_nav"), "config", "nav2_params.yaml"])),
         DeclareLaunchArgument("use_sim_time", default_value="true"),
 
-        relay,
+        tf_relay,
+        cmd_relay,
 
         Node(package="nav2_controller", executable="controller_server", name="controller_server", output="screen", parameters=[params_file, {"use_sim_time": use_sim_time}]),
         Node(package="nav2_planner", executable="planner_server", name="planner_server", output="screen", parameters=[params_file, {"use_sim_time": use_sim_time}]),
