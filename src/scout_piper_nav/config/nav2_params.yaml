@@ -352,4 +352,3 @@ lifecycle_manager_navigation:
 amcl:
   ros__parameters:
     use_sim_time: True
-EOF

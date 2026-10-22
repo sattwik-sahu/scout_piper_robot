@@ -25,4 +25,3 @@ def generate_launch_description():
         DeclareLaunchArgument("use_sim_time", default_value="true"),
         nav2_launch,
     ])
-EOF
