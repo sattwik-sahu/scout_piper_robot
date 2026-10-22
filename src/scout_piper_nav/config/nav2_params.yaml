@@ -56,22 +56,19 @@ controller_server:
       prune_distance: 1.7
       transform_tolerance: 0.1
       temperature: 0.3
+      open_loop: false
       gamma: 0.015
       motion_model: "DiffDrive"
       visualize: false
       reset_period: 1.0
       regenerate_noises: false
+      TrajectoryValidator:
+        plugin: "mppi::DefaultOptimalTrajectoryValidator"
+        consider_footprint: false
       TrajectoryVisualizer:
         trajectory_step: 5
         time_step: 1
-      critics:
-        - ConstraintCritic
-        - CostCritic
-        - GoalCritic
-        - GoalAngleCritic
-        - PathAlignCritic
-        - PathFollowCritic
-        - PreferForwardCritic
+      critics: ["ConstraintCritic", "CostCritic", "GoalCritic", "GoalAngleCritic", "PathAlignCritic", "PathFollowCritic", "PreferForwardCritic"]
       ConstraintCritic:
         enabled: true
         cost_power: 1
@@ -81,7 +78,7 @@ controller_server:
         cost_power: 1
         cost_weight: 0.5
         critical_cost: 300.0
-        consider_footprint: true
+        consider_footprint: false
         collision_cost: 100000.0
         near_goal_distance: 1.0
         trajectory_point_step: 2
