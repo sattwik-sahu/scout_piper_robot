@@ -14,12 +14,6 @@
 -->
 <robot name="scout_mini_piper">
   <!-- Scout Mini base with indoor wheels (wheel.dae), not the rugged type1/type2 wheels. -->
-  <link name="base_footprint"/>
-  <joint name="base_footprint_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
   <link name="base_link">
     <visual>
       <origin rpy="1.57 0 -1.57" xyz="0 0 0.0"/>
