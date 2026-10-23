@@ -195,7 +195,8 @@ local_costmap:
         mark_threshold: 0
         observation_sources: points
         points:
-          topic: /mini_piper/depth/points
+          topic: /mini_piper/gripper_camera/left/depth/points
+          sensor_frame: "gripper_left_camera_optical_link"
           max_obstacle_height: 2.0
           clearing: True
           marking: True
