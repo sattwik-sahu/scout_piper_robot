@@ -1,8 +1,8 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch_ros.actions import ComposableNodeContainer
+from launch_ros.actions import ComposableNodeContainer, Node
 from launch_ros.descriptions import ComposableNode
 from launch_ros.substitutions import FindPackageShare
 
@@ -26,6 +26,41 @@ def generate_launch_description() -> LaunchDescription:
         launch_arguments=[
             ("use_sim_time", use_sim_time_arg),
             ("params_file", params_file_arg),
+            # nav2_bringup's built-in autostart fires the lifecycle manager with no
+            # grace period; with rmw_zenoh its change_state service calls can race
+            # service discovery and abort bringup intermittently
+            # (ros2/rmw_zenoh#783). We disable it and bring the nodes up ourselves,
+            # after a delay, with our own lifecycle manager.
+            ("autostart", "false"),
+        ],
+    )
+    lifecycle_nodes = [
+        "controller_server",
+        "smoother_server",
+        "planner_server",
+        "route_server",
+        "behavior_server",
+        "velocity_smoother",
+        "collision_monitor",
+        "bt_navigator",
+        "waypoint_follower",
+        "docking_server",
+    ]
+    lifecycle_manager_launch = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+                package="nav2_lifecycle_manager",
+                executable="lifecycle_manager",
+                name="lifecycle_manager_navigation",
+                output="screen",
+                parameters=[
+                    {"use_sim_time": use_sim_time_arg},
+                    {"autostart": True},
+                    {"bond_timeout": 10.0},
+                    {"node_names": lifecycle_nodes},
+                ],
+            ),
         ],
     )
     depth_container_launch = ComposableNodeContainer(
@@ -61,6 +96,7 @@ def generate_launch_description() -> LaunchDescription:
             ),
             DeclareLaunchArgument("use_sim_time", default_value="true"),
             nav2_launch,
+            lifecycle_manager_launch,
             depth_container_launch,
         ]
     )
