@@ -15,11 +15,11 @@
         <mesh filename="package://scout_description/meshes/scout_mini_base_link2.dae"/>
       </geometry>
     </collision>
-    <inertial>
-      <mass value="60"/>
-      <origin xyz="0.0 0.0 0.0"/>
-      <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465"/>
-    </inertial>
+    <!-- <inertial> -->
+    <!--   <mass value="60"/> -->
+    <!--   <origin xyz="0.0 0.0 0.0"/> -->
+    <!--   <inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465"/> -->
+    <!-- </inertial> -->
   </link>
 
   <link name="inertial_link">

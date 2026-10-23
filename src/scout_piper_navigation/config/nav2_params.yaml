@@ -1,30 +1,37 @@
-# Nav2 params for Scout Piper in Isaac Sim
-# use_sim_time: true everywhere
+amcl:
+  ros__parameters:
+    alpha1: 0.2
+    alpha2: 0.2
+    alpha3: 0.2
+    alpha4: 0.2
+    alpha5: 0.2
+    base_frame_id: "base_link"
+    global_frame_id: "world"
+    odom_frame_id: "odom"
+    robot_model_type: "nav2_amcl::DifferentialMotionModel"
+    scan_topic: scan
 
 bt_navigator:
   ros__parameters:
-    use_sim_time: True
     global_frame: world
     robot_base_frame: base_link
-    odom_topic: "odom"
+    odom_topic: odom
     bt_loop_duration: 10
     default_server_timeout: 20
-    navigators: ['navigate_to_pose', 'navigate_through_poses']
+    navigators: ["navigate_to_pose", "navigate_through_poses"]
     navigate_to_pose:
       plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
     navigate_through_poses:
       plugin: "nav2_bt_navigator::NavigateThroughPosesNavigator"
 
-
 controller_server:
   ros__parameters:
-    use_sim_time: True
     controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
     failure_tolerance: 0.3
-    progress_checker_plugin: "progress_checker"
+    progress_checker_plugins: ["progress_checker"]
     goal_checker_plugins: ["general_goal_checker"]
     controller_plugins: ["FollowPath"]
     progress_checker:
@@ -44,30 +51,19 @@ controller_server:
       vx_std: 0.2
       vy_std: 0.0
       wz_std: 0.4
-      vx_max: 2.7
+      vx_max: 1.5
       vx_min: -0.5
       vy_max: 0.0
-      wz_max: 1.5
+      wz_max: 1.5708
       ax_max: 2.5
       ax_min: -2.5
       ay_max: 0.0
       az_max: 3.0
       iteration_count: 1
-      prune_distance: 1.7
-      transform_tolerance: 0.1
       temperature: 0.3
-      open_loop: false
       gamma: 0.015
       motion_model: "DiffDrive"
       visualize: false
-      reset_period: 1.0
-      regenerate_noises: false
-      TrajectoryValidator:
-        plugin: "mppi::DefaultOptimalTrajectoryValidator"
-        consider_footprint: false
-      TrajectoryVisualizer:
-        trajectory_step: 5
-        time_step: 1
       critics: ["ConstraintCritic", "CostCritic", "GoalCritic", "GoalAngleCritic", "PathAlignCritic", "PathFollowCritic", "PreferForwardCritic"]
       ConstraintCritic:
         enabled: true
@@ -111,10 +107,12 @@ controller_server:
         cost_power: 1
         cost_weight: 5.0
         threshold_to_consider: 0.5
+      TrajectoryValidator:
+        plugin: "mppi::DefaultOptimalTrajectoryValidator"
+        consider_footprint: false
 
 planner_server:
   ros__parameters:
-    use_sim_time: True
     expected_planner_frequency: 20.0
     planner_plugins: ["GridBased"]
     GridBased:
@@ -124,13 +122,9 @@ planner_server:
       downsampling_factor: 1
       allow_unknown: true
       max_iterations: 1000000
-      max_on_approach_iterations: 1000
       max_planning_time: 5.0
       cost_travel_multiplier: 2.0
       use_final_approach_orientation: false
-      analytic_expansion_ratio: 3.5
-      analytic_expansion_max_length: 3.0
-      analytic_expansion_max_angle: 1.5708
       minimum_turning_radius: 0.4
       reverse_penalty: 2.0
       change_penalty: 0.0
@@ -142,24 +136,18 @@ planner_server:
       allow_reverse_expansion: false
       angle_quantization_bins: 72
       smooth_path: true
-      smoother:
-        max_iterations: 1000
-        w_smooth: 0.3
-        w_data: 0.2
-        tolerance: 1e-10
 
 behavior_server:
   ros__parameters:
-    use_sim_time: True
     local_frame: world
     global_frame: world
     robot_base_frame: base_link
     transform_tolerance: 0.1
     simulate_ahead_time: 2.0
-    max_rotational_vel: 1.5
+    max_rotational_vel: 1.5708
     min_rotational_vel: 0.4
     rotational_acc_lim: 3.2
-    behaviors: ["spin", "backup", "drive_on_heading", "wait"]
+    behavior_plugins: ["spin", "backup", "drive_on_heading", "wait"]
     spin:
       plugin: "nav2_behaviors::Spin"
     backup:
@@ -168,21 +156,14 @@ behavior_server:
       plugin: "nav2_behaviors::DriveOnHeading"
     wait:
       plugin: "nav2_behaviors::Wait"
-    local_costmap_topic: local_costmap/costmap_raw
-    global_costmap_topic: global_costmap/costmap_raw
-    local_costmap (costmap):
-      plugin: "nav2_costmap_2d::Costmap2DROS"
-    global_costmap (costmap):
-      plugin: "nav2_costmap_2d::Costmap2DROS"
 
 velocity_smoother:
   ros__parameters:
-    use_sim_time: True
     smoothing_frequency: 20.0
     scale_velocities: false
     feedback: "OPEN_LOOP"
-    max_velocity: [2.7, 0.0, 1.5]
-    min_velocity: [-0.5, 0.0, -1.5]
+    max_velocity: [1.5, 0.0, 1.5708]
+    min_velocity: [-0.5, 0.0, -1.5708]
     max_accel: [2.5, 0.0, 3.0]
     max_decel: [-2.5, 0.0, -3.0]
     odom_topic: "odom"
@@ -193,60 +174,15 @@ velocity_smoother:
 local_costmap:
   local_costmap:
     ros__parameters:
-      use_sim_time: True
       global_frame: world
       robot_base_frame: base_link
-      footprint: "[[0.306, 0.290], [0.306, -0.290], [-0.306, -0.290], [-0.306, 0.290]]"
       update_frequency: 5.0
       publish_frequency: 2.0
       rolling_window: true
       width: 5
       height: 5
-      origin_x: -2.5
-      origin_y: 5.0
       resolution: 0.05
-      transform_tolerance: 0.1
-      plugins: ["voxel_layer", "inflation_layer"]
-      voxel_layer:
-        plugin: "nav2_costmap_2d::VoxelLayer"
-        enabled: True
-        publish_voxel_map: True
-        origin_z: 0.0
-        z_resolution: 0.05
-        z_voxels: 16
-        max_obstacle_height: 2.0
-        mark_threshold: 0
-        observation_sources: scan
-        scan:
-          topic: /mini_piper/scan
-          max_obstacle_height: 2.0
-          clearing: True
-          marking: True
-          data_type: "LaserScan"
-          raytrace_max_range: 3.0
-          raytrace_min_range: 0.0
-          obstacle_max_range: 2.5
-          obstacle_min_range: 0.0
-      inflation_layer:
-        plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
-      always_send_full_costmap: True
-  global_costmap:
-    ros__parameters:
-      use_sim_time: True
-      global_frame: world
-      robot_base_frame: base_link
       footprint: "[[0.306, 0.290], [0.306, -0.290], [-0.306, -0.290], [-0.306, 0.290]]"
-      update_frequency: 1.0
-      publish_frequency: 1.0
-      rolling_window: false
-      width: 50
-      height: 50
-      origin_x: -25.0
-      origin_y: -25.0
-      resolution: 0.05
-      transform_tolerance: 0.1
       plugins: ["voxel_layer", "inflation_layer"]
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
@@ -257,13 +193,13 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan
-        scan:
-          topic: /mini_piper/scan
+        observation_sources: points
+        points:
+          topic: /mini_piper/depth/points
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "PointCloud2"
           raytrace_max_range: 3.0
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
@@ -277,19 +213,15 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      use_sim_time: True
       global_frame: world
       robot_base_frame: base_link
-      footprint: "[[0.306, 0.290], [0.306, -0.290], [-0.306, -0.290], [-0.306, 0.290]]"
       update_frequency: 1.0
       publish_frequency: 1.0
       rolling_window: false
       width: 50
       height: 50
-      origin_x: -25.0
-      origin_y: -25.0
       resolution: 0.05
-      transform_tolerance: 0.1
+      footprint: "[[0.306, 0.290], [0.306, -0.290], [-0.306, -0.290], [-0.306, 0.290]]"
       plugins: ["voxel_layer", "inflation_layer"]
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
@@ -300,13 +232,13 @@ global_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan
-        scan:
-          topic: /mini_piper/scan
+        observation_sources: points
+        points:
+          topic: /mini_piper/gripper_camera/left/depth/points
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "PointCloud2"
           raytrace_max_range: 3.0
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
@@ -317,28 +249,48 @@ global_costmap:
         inflation_radius: 0.55
       always_send_full_costmap: True
 
-lifecycle_manager_navigation:
+docking_server:
   ros__parameters:
-    use_sim_time: True
-    autostart: true
-    node_names: ['controller_server', 'planner_server', 'behavior_server', 'bt_navigator', 'velocity_smoother']
-    bond_timeout: 0.0
+    controller_frequency: 50.0
+    base_frame: base_link
+    dock_prestaging_tolerance: 0.5
+    dock_plugins: ["simple_charging_dock"]
+    simple_charging_dock:
+      plugin: "opennav_docking::SimpleChargingDock"
+      docking_threshold: 0.05
+      staging_x_offset: -0.7
+      use_external_detection_pose: true
+      use_battery_status: false
+      dock_direction: "forward"
 
 collision_monitor:
   ros__parameters:
-    use_sim_time: True
     base_frame_id: "base_link"
     odom_frame_id: "odom"
-    cmd_vel_in_topic: "/cmd_vel"
-    cmd_vel_out_topic: "/cmd_vel"
-    state_topic: ""
+    cmd_vel_in_topic: "/cmd_vel_smoothed"
+    cmd_vel_out_topic: "/mini_piper/cmd_vel"
     transform_tolerance: 0.2
-    source_timeout: 2.0
+    source_timeout: 1.0
     base_shift_correction: true
     stop_pub_timeout: 2.0
-    polygons: []
-    observation_sources: []
-
-amcl:
-  ros__parameters:
-    use_sim_time: True
+    polygons: ["FootprintApproach"]
+    FootprintApproach:
+      type: "polygon"
+      action_type: "approach"
+      points: "[[0.306, 0.290], [0.306, -0.290], [-0.306, -0.290], [-0.306, 0.290]]"
+      footprint_topic: "/local_costmap/published_footprint"
+      time_before_collision: 1.2
+      simulation_time_step: 0.1
+      min_points: 6
+      max_points: 100
+      visualize: false
+      enabled: true
+    observation_sources: ["pointcloud"]
+    pointcloud:
+      type: "pointcloud"
+      topic: "/mini_piper/gripper_camera/left/depth/points"
+      transport_type: "raw"
+      min_height: 0.1
+      max_height: 2.0
+      min_range: 0.2
+      enabled: true
