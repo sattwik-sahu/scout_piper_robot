@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: scout_with_piper_description
+    relative_path: urdf/scout_piper_moveit.urdf
+  srdf:
+    relative_path: config/scout_mini_piper.srdf
+  package_settings:
+    author_name: Sattwik Kumar Sahu
+    author_email: sahusattwik@gmail.com
+    generated_timestamp: 1793791011
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
