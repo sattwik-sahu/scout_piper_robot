@@ -5,24 +5,37 @@
 ## Build
 
 ```bash
-pixi run build-scout   # builds scout_description + scout_with_piper_description (symlink install)
+pixi run build   # description, MoveIt, Nav2 (symlink install)
+pixi run test    # tests for those packages
 ```
+
+Python is formatted and linted with ruff. The ament flake8 test is disabled.
+
+`pixi run build-all` builds every package in the workspace, including the
+simulation and legacy packages.
+
+## Documentation
+
+- `docs/bringup.md` — start Nav2 and MoveIt together
+- `docs/navigation.md` — Nav2 stack
+- `docs/isaacsim_urdf_synth_patch.md` — Isaac Sim URDF synthesis patch
 
 ## Launch
 
 ```bash
 source install/setup.bash
-ros2 launch scout_with_piper_description scout_mini_piper.launch.py
+ros2 launch scout_mini_piper_description scout_mini_piper.launch.py
 # variants:
-ros2 launch scout_with_piper_description scout_mini_piper_small.launch.py
-ros2 launch scout_with_piper_description description.launch.py
+ros2 launch scout_mini_piper_description scout_mini_piper_small.launch.py
+ros2 launch scout_mini_piper_description description.launch.py
 ```
 
 ## Planning arm movements with MoveIt
 
 `scout_mini_piper_moveit` contains planning configuration and launch files only.
 The robot bringup provides `robot_state_publisher`, the `controller_manager`, and
-the controllers. MoveIt consumes their topics.
+the controllers. MoveIt consumes their topics. To run Nav2 and MoveIt together,
+see `docs/bringup.md`.
 
 Planning groups: `manipulator` (lift and `joint1`–`joint6`) and `gripper`.
 
@@ -33,7 +46,7 @@ Planning groups: `manipulator` (lift and `joint1`–`joint6`) and `gripper`.
 2. Start the robot state publisher on simulation time:
 
    ```bash
-   ros2 launch scout_with_piper_description scout_mini_piper.launch.py \
+   ros2 launch scout_mini_piper_description scout_mini_piper.launch.py \
      use_sim_time:=true gui:=false joint_state_publisher:=false
    ```
 
@@ -247,12 +260,12 @@ servers must exist, and the transform must resolve with current timestamps.
 
 - `scripts/isaac_ros_env.sh` preloads the FastRTPS typesupport libraries that
   Zenoh and Isaac's in-process controller manager must share.
-- Isaac's `urdf_synth.py` patch (`_prune_to_control_tree`) must be re-applied
-  after an Isaac Sim reinstall, otherwise the synthesized URDF has multiple roots.
+- The Isaac `urdf_synth.py` patch and its verification are documented in
+  `docs/isaacsim_urdf_synth_patch.md`.
 
 ## Configuration
 
-All robot tunables live in `src/scout_with_piper_description/config/robot.yaml` (central config). Edit and relaunch — no rebuild needed (symlink install).
+All robot tunables live in `src/scout_mini_piper_description/config/robot.yaml` (central config). Edit and relaunch — no rebuild needed (symlink install).
 
 - `lift.*` — actuator mount, heights, platform offset.
 - `left_camera.*` — `gripper_left_camera_link` transform (xyz/rpy) relative to `gripper_base_link`.
@@ -260,7 +273,7 @@ All robot tunables live in `src/scout_with_piper_description/config/robot.yaml` 
 Override the file at launch:
 
 ```bash
-ros2 launch scout_with_piper_description scout_mini_piper.launch.py robot_config_file:=/path/to/robot.yaml
+ros2 launch scout_mini_piper_description scout_mini_piper.launch.py robot_config_file:=/path/to/robot.yaml
 ```
 
 ## Notes

@@ -11,8 +11,8 @@
 -->
 <robot name="scout_mini_piper" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_mini.xacro" />
-  <xacro:include filename="$(find scout_with_piper_description)/urdf/lift_actuator.xacro" />
-  <xacro:include filename="$(find scout_with_piper_description)/urdf/piper_description.xacro" />
+  <xacro:include filename="$(find scout_mini_piper_description)/urdf/scout_mini.xacro" />
+  <xacro:include filename="$(find scout_mini_piper_description)/urdf/lift_actuator.xacro" />
+  <xacro:include filename="$(find scout_mini_piper_description)/urdf/piper_description.xacro" />
 
 </robot>

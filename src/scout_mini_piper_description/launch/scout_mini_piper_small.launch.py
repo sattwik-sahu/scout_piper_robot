@@ -1,9 +1,8 @@
 from pathlib import Path
 
-import yaml
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
-from launch.conditions import IfCondition, UnlessCondition
+from launch.conditions import IfCondition
 from launch.substitutions import (
     Command,
     FindExecutable,
@@ -13,6 +12,7 @@ from launch.substitutions import (
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
+import yaml
 
 # Individually overridable lift settings. CLI value wins; empty means "take the
 # value from the YAML file" (or the xacro default if the key is absent).
@@ -146,7 +146,7 @@ def _launch_setup(context, *args, **kwargs):
         " ",
         PathJoinSubstitution(
             [
-                FindPackageShare("scout_with_piper_description"),
+                FindPackageShare("scout_mini_piper_description"),
                 "urdf",
                 "scout_mini_piper_small.xacro",
             ]
@@ -189,7 +189,7 @@ def _launch_setup(context, *args, **kwargs):
 def generate_launch_description():
     default_params = PathJoinSubstitution(
         [
-            FindPackageShare("scout_with_piper_description"),
+            FindPackageShare("scout_mini_piper_description"),
             "config",
             "robot.yaml",
         ]

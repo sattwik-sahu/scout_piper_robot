@@ -5,8 +5,8 @@
 
     <xacro:arg name="robot_namespace" default="/" /> 
 
-    <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_wheel_type1.xacro" />
-    <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_wheel_type2.xacro" />
+    <xacro:include filename="$(find scout_mini_piper_description)/urdf/scout_wheel_type1.xacro" />
+    <xacro:include filename="$(find scout_mini_piper_description)/urdf/scout_wheel_type2.xacro" />
 
     <!-- Variables -->
     <xacro:property name="M_PI" value="3.14159"/>

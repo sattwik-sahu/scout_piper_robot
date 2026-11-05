@@ -63,7 +63,7 @@ def generate_launch_description() -> LaunchDescription:
                 "params_file",
                 default_value=PathJoinSubstitution(
                     [
-                        FindPackageShare("scout_piper_navigation"),
+                        FindPackageShare("scout_mini_piper_navigation"),
                         "config",
                         "nav2_params.yaml",
                     ]

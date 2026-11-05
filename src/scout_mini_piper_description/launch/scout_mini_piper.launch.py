@@ -1,19 +1,19 @@
 from pathlib import Path
 
-import yaml
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
-from launch.conditions import IfCondition, UnlessCondition
-from launch.substitutions import PythonExpression
+from launch.conditions import IfCondition
 from launch.substitutions import (
     Command,
     FindExecutable,
     LaunchConfiguration,
     PathJoinSubstitution,
+    PythonExpression,
 )
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
+import yaml
 
 # Individually overridable lift settings. CLI value wins; empty means "take the
 # value from the YAML file" (or the xacro default if the key is absent).
@@ -147,7 +147,7 @@ def _launch_setup(context, *args, **kwargs):
         " ",
         PathJoinSubstitution(
             [
-                FindPackageShare("scout_with_piper_description"),
+                FindPackageShare("scout_mini_piper_description"),
                 "urdf",
                 "scout_mini_piper.xacro",
             ]
@@ -184,7 +184,13 @@ def _launch_setup(context, *args, **kwargs):
             executable="joint_state_publisher_gui",
             condition=IfCondition(
                 PythonExpression(
-                    ["'", gui, "' == 'true' and '", LaunchConfiguration("joint_state_publisher"), "' == 'true'"]
+                    [
+                        "'",
+                        gui,
+                        "' == 'true' and '",
+                        LaunchConfiguration("joint_state_publisher"),
+                        "' == 'true'",
+                    ]
                 )
             ),
         ),
@@ -194,7 +200,7 @@ def _launch_setup(context, *args, **kwargs):
 def generate_launch_description():
     default_params = PathJoinSubstitution(
         [
-            FindPackageShare("scout_with_piper_description"),
+            FindPackageShare("scout_mini_piper_description"),
             "config",
             "robot.yaml",
         ]
