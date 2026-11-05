@@ -40,6 +40,11 @@ ros-jazzy-nav2-bringup = ">=1.3.13,<2"
 ros-jazzy-compressed-depth-image-transport = ">=4.0.7,<5"
 ros-jazzy-compressed-image-transport = ">=4.0.7,<5"
 ros-jazzy-depth-image-proc = ">=5.0.13,<6"
+ros-jazzy-moveit = ">=2.12.4,<3"
+ros-jazzy-moveit-setup-assistant = ">=2.12.4,<3"
+ros-jazzy-ros2-control = ">=4.49.0,<5"
+ros-jazzy-ros2-controllers = ">=4.43.0,<5"
+ros-jazzy-moveit-ros-perception = ">=2.12.4,<3"
 
 [pypi-options]
 extra-index-urls = ["https://pypi.nvidia.com"]

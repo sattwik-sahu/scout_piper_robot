@@ -48,6 +48,56 @@ if [[ "${RMW_IMPLEMENTATION:-}" == "rmw_zenoh_cpp" ]]; then
     # Isaac Sim's own libs supply libyaml.so and the typesupport set; the shim
     # supplies the Zenoh RMW. Both are needed for the bridge to load.
     export LD_LIBRARY_PATH="$SHIM_DIR:$ISAAC_ROS_LIB${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+    # Controller plugins are Isaac's and create publishers with Isaac's C++
+    # typesupport handles. rmw_zenoh then asks for the FastRTPS typesupport and
+    # dlopens lib<pkg>__rosidl_typesupport_fastrtps_{c,cpp}.so by name. That
+    # search hits Isaac's jazzy/lib first, whose typesupport_identifier pointer
+    # is not the one Zenoh (loaded from the conda prefix) compares against, so
+    # create_publisher fails with "Type support not from this implementation".
+    #
+    # Do not fix this with shim symlinks. Those libraries have RPATH $ORIGIN,
+    # and $ORIGIN of a symlink is the shim directory, so their dependencies
+    # would still resolve to Isaac's copies. Preload the real conda files:
+    # dlopen of the same SONAME then returns the already-loaded pixi copy, and
+    # $ORIGIN stays the conda lib dir. This is the same mechanism rmw_env.sh
+    # uses for librmw_zenoh_cpp.so, and it does not put $CONDA_PREFIX/lib on
+    # LD_LIBRARY_PATH (which would load conda's libz and abort Kit).
+    TYPESUPPORT_LIBS=(
+        librosidl_typesupport_fastrtps_c.so
+        librosidl_typesupport_fastrtps_cpp.so
+        libaction_msgs__rosidl_typesupport_fastrtps_c.so
+        libaction_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+        libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
+        libcontrol_msgs__rosidl_typesupport_fastrtps_c.so
+        libcontrol_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
+        libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libsensor_msgs__rosidl_typesupport_fastrtps_c.so
+        libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libservice_msgs__rosidl_typesupport_fastrtps_c.so
+        libservice_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libstd_msgs__rosidl_typesupport_fastrtps_c.so
+        libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libtrajectory_msgs__rosidl_typesupport_fastrtps_c.so
+        libtrajectory_msgs__rosidl_typesupport_fastrtps_cpp.so
+        libunique_identifier_msgs__rosidl_typesupport_fastrtps_c.so
+        libunique_identifier_msgs__rosidl_typesupport_fastrtps_cpp.so
+    )
+    for lib in "${TYPESUPPORT_LIBS[@]}"; do
+        src=$(ls "$CONDA_PREFIX/lib/$lib" 2>/dev/null | head -1 || true)
+        if [[ -z "$src" ]]; then
+            echo "isaac_ros_env: missing $lib in $CONDA_PREFIX/lib" >&2
+            exit 1
+        fi
+        export LD_PRELOAD="$(readlink -f "$src")${LD_PRELOAD:+:$LD_PRELOAD}"
+    done
+else
+    # Non-Zenoh RMW (e.g. rmw_fastrtps_cpp): Isaac Sim ships a complete Fast DDS
+    # stack in its own jazzy/lib, so no shim is needed, but that directory must
+    # still be on LD_LIBRARY_PATH or librmw_fastrtps_cpp.so cannot be found.
+    export LD_LIBRARY_PATH="$ISAAC_ROS_LIB${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 fi
 
 # Run whatever was passed, with the environment above in place. This script is

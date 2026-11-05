@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="scout_mini_piper">
+    <!-- Planning description only. MoveIt does not need (or use) a
+         <ros2_control> block. The robot bringup, real or simulated, supplies the
+         hardware interfaces and publishes the same kinematic model. -->
+    <xacro:include filename="$(find scout_with_piper_description)/urdf/scout_piper_moveit.urdf" />
+</robot>
